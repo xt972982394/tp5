@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>考试完成</title>
+
+<link rel="stylesheet" type="text/css" href="__STATIC__/index/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/index/css/style.css" />
+</head>
+
+<body>
+
+<div class="login_div">
+	<div class="col-xs-12 login_title">你好！{$Think.session.username}同学</div>
+		<div class="nav">
+			<div class="col-xs-12 login_btn_div">
+				<li class="col-xs-11 login_title"   >{$fs}分 {$dj}!</li>
+			</div>
+			<div class="col-xs-12 login_btn_div">
+				<li><a class="col-xs-11 login_title" href="{:url('Person/person')}"  >返回首页</a></li>>
+			</div>
+			<div class="col-xs-12 login_btn_div">
+				<li><a class="col-xs-11 login_title" href="{:url('Person/loginout')}"  >退出登录</a></li>
+
+			</div>
+		</div>
+</div>
+
+</body>
+</html>

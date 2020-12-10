@@ -1,0 +1,78 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>开始考试</title>
+<link href="__STATIC__/test/css/main.css" rel="stylesheet" type="text/css" />
+<link href="__STATIC__/test/css/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="__STATIC__/test/css/test.css" rel="stylesheet" type="text/css" />
+
+<style>
+.hasBeenAnswer {
+	background: #eaebec;
+	color:#fff;
+}
+
+</style>
+</head>
+
+<body>
+	<div class="main">
+		<!--nr start-->
+		<div class="test_main">
+			<div class="nr_left">
+				<div class="test">
+					<form action="{:url('Finish/finish')}" method="post">
+						
+							<div class="test_content">
+								<div class="test_content_title">
+									<h2>单选题 请在十分钟内完成</h2>
+								</div>
+							</div>
+							{volist name="tk" id="v"}
+							<div class="test_content_nr">
+								<ul>
+											<div class="test_content_nr_tt">
+                                            <font>{$v.topic}</font>
+											</div>
+											<div class="test_content_nr_main">
+												<ul>
+														<li class="option">
+															
+																<input type="radio" class="radioOrCheck" name="{$v.id}" value="A"/>A.{$v.A}
+														</li>
+														<li class="option">
+															
+																<input type="radio" class="radioOrCheck" name="{$v.id}" value="B"/>B.{$v.B}
+														</li>
+														<li class="option">
+															
+																<input type="radio" class="radioOrCheck" name="{$v.id}" value="C"/>C.{$v.C}
+														</li>
+														<li class="option">
+																<input type="radio" class="radioOrCheck" name="{$v.id}" value="D"/>D.{$v.D}
+														</li>
+												</ul>
+											</div>
+											{/volist}
+																	<div class="test_title">
+							<font><input type="submit" value="交卷"></font>
+						</div>
+							
+						
+					</form>
+				</div>
+
+			</div>
+			
+		</div>
+
+	</div>
+
+
+<div style="text-align:center;">
+</div>
+
+</body>
+
+</html>
